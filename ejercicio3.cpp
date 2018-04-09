@@ -50,7 +50,7 @@ void InsertionSort(int num[],int tam){
 void MergeSort(int num[],int num_aux[],int pri,int ult){
     int i,pri2,aux,tam,mit;
     mit=(pri+ult)/2;
-    pri2=mit-1;
+    pri2=mit+1;
     aux=pri;
     tam=ult-pri+1;
 
