@@ -4,14 +4,14 @@
 using namespace std;
 
 void pedirDatos();
-void sumar(int **,int **,int,int);
+void mult(int **,int **,int,int);
 void mostrar(int **,int,int);
 
 int **matriz1,**matriz2,filas,columnas;
 
 int main(){
 	pedirDatos();
-	sumar(matriz1,matriz2,filas,columnas);
+	mult(matriz1,matriz2,filas,columnas);
 	mostrar(matriz1,filas,columnas);
 
 	for(int i=0;i<filas;i++){
@@ -62,10 +62,10 @@ void pedirDatos(){
 	}
 }
 
-void sumar(int **matriz1,int **matriz2,int filas,int columnas){
+void mult(int **matriz1,int **matriz2,int filas,int columnas){
 	for(int i=0;i<filas;i++){
 		for(int j=0;j<columnas;j++){
-			*(*(matriz1+i)+j) += *(*(matriz2+i)+j);
+			*(*(matriz1+i)+j) *= *(*(matriz2+i)+j);
 		}
 	}
 }
